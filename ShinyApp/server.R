@@ -11,10 +11,19 @@ shinyServer(function(input, output) {
   #  2) Its output type is a plot
   
   output$distPlot <- renderPlot({
-    x    <- faithful[, 2]  # Old Faithful Geyser data
-    bins <- seq(min(x), max(x), length.out = input$bins + 1)
     
+    dist <- {
+      if (input$dist == "norm")
+        rnorm(input$obs) 
+      else if(input$dist == "unif")
+        runif(input$obs)
+      else if (input$dist == "lnorm") 
+        rlnorm(input$obs)
+      else rexp(input$obs)
+      }
+    if (input$col =='') col <- "steelblue2" else col <- input$col
     # draw the histogram with the specified number of bins
-    hist(x, breaks = bins, col = 'darkgray', border = 'white')
+    bins <- seq(min(dist), max(dist), length.out = input$bins + 1)
+    hist(dist, breaks = bins, col = col, border = 'white')
   })
 })
