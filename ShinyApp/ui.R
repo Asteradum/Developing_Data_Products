@@ -18,7 +18,7 @@ shinyUI(
                                  min = 10,
                                  max = 1000,
                                  value = 250),
-                     sliderInput("bins",
+                     sliderInput("breaks",
                                  "Number of breaks:",
                                  min = 1,
                                  max = 50,
@@ -43,7 +43,7 @@ shinyUI(
                tags$ul(
                  tags$li("Distribution: Type of distribution to choose."), 
                  tags$li("Observations: number of observations in the random distribution"), 
-                 tags$li("Breaks: Decide how many breaks you want to have in the figure. If this number is higher than the number of observations it will throw an error"),
+                 tags$li("Breaks: Decide how many breaks you want to have in the figure."),
                  tags$li("Color: Type the color you want in the figure. The Default color is steelblue2. If the color typed does not exist it will throw an error.")
                )
                )
