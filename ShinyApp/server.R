@@ -21,7 +21,8 @@ shinyServer(function(input, output) {
         rlnorm(input$obs)
       else rexp(input$obs)
       }
-    if (input$col =='') col <- "steelblue2" else col <- input$col
+    if (input$col == '') col <- "steelblue2" else col <- input$col
+    
     # draw the histogram with the specified number of bins
     bins <- seq(min(dist), max(dist), length.out = input$bins + 1)
     hist(dist, breaks = bins, col = col, border = 'white')
