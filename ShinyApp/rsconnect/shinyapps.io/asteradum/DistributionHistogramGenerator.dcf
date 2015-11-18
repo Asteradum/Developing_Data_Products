@@ -1,8 +1,8 @@
 name: DistributionHistogramGenerator
 account: asteradum
 server: shinyapps.io
-bundleId: 313640
+bundleId: 313644
 url: https://asteradum.shinyapps.io/DistributionHistogramGenerator
-when: 1447881572.05485
+when: 1447882314.63968
 asMultiple: FALSE
 asStatic: FALSE
