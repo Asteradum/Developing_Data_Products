@@ -4,7 +4,7 @@
   <title>Distribution Histogram Generator</title>
   <meta charset="utf-8">
   <meta name="description" content="Distribution Histogram Generator">
-  <meta name="author" content="asteradum">
+  <meta name="author" content="Asteradum">
   <meta name="generator" content="slidify" />
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta http-equiv="X-UA-Compatible" content="chrome=1">
@@ -34,7 +34,7 @@
   <hgroup class="auto-fadein">
     <h1>Distribution Histogram Generator</h1>
     <h2>An awesome app for you</h2>
-    <p>asteradum<br/></p>
+    <p>Asteradum<br/></p>
   </hgroup>
   <article></article>  
 </slide>
@@ -43,55 +43,93 @@
     <!-- SLIDES -->
     <slide class="" id="slide-1" style="background:;">
   <hgroup>
-    <h2>Slide 1</h2>
+    <h2>Introduction</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Distribution Histogram Generator is an AWESOME app that allows you to generate random distributions of different types.</p>
+
+<ul>
+<li><p>The app has been created with Shiny, a library used in R.</p></li>
+<li><p>It is hosted in shinyapps.io and accessible to everybody.</p></li>
+</ul>
+
+<p>The application uses two files: a ui.R and Server.R:</p>
+
+<ul>
+<li><p>The ui.R show the graphical interface to the user and captures the input.</p></li>
+<li><p>The Server.R process the input and provides an output, that will be displayed by the ui.R again.</p></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="instructions" style="background:;">
+  <hgroup>
+    <h2>Instructions</h2>
   </hgroup>
   <article data-timings="">
     <ol>
-<li>Edit YAML front matter</li>
-<li>Write using R Markdown</li>
-<li>Use an empty line followed by three dashes to separate slides!</li>
+<li><p>Open a new tab in your web browser an type: <a href="http://asteradum.shinyapps.io/DistributionHistogramGenerator">http://asteradum.shinyapps.io/DistributionHistogramGenerator</a></p></li>
+<li><p>You can select different distrbutions: Uniform, Normal, Exponential and Logaritmic.</p></li>
+<li><p>Decide the number of observations to use. More observations will make the distribution more similar to the theoretical distribution.</p></li>
+<li><p>Decide the number of breaks.</p></li>
+<li><p>Decide the color. If you type a color which does not exist, it will throw an error.</p></li>
 </ol>
 
   </article>
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="class" id="id" style="background:;">
+<slide class="class" id="techinfo" style="background:;">
   <hgroup>
-    <h2>Slide 2</h2>
+    <h2>Technical information</h2>
   </hgroup>
   <article data-timings="">
-    
+    <p>Depending on the option choosen, a diferent distribution will be executed, but all of them have the same pattern. The code in a normal R script will be something like this:</p>
+
+<pre><code class="r">obs = 780
+dist &lt;- rnorm(obs)
+breaks &lt;- seq(min(dist), max(dist), length.out = 25)
+hist(dist, breaks = breaks, col = &#39;steelblue2&#39;, border = &#39;white&#39;)
+</code></pre>
+
+<p><img src="assets/fig/unnamed-chunk-1-1.png" alt="plot of chunk unnamed-chunk-1"> </p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="ShinyApp" style="background:;">
+  <hgroup>
+    <h2>Demo</h2>
+  </hgroup>
+  <article data-timings="">
+    <iframe src = 'http://asteradum.shinyapps.io/DistributionHistogramGenerator' height='600px'></iframe>
+
   </article>
   <!-- Presenter Notes -->
 </slide>
 
 <slide class="class" id="id" style="background:;">
   <hgroup>
-    <h2>Slide 3</h2>
+    <h2>Should I use it?</h2>
   </hgroup>
   <article data-timings="">
-    
-  </article>
-  <!-- Presenter Notes -->
-</slide>
+    <p>This tool is ideal for showing the basic of statistics to new students:</p>
 
-<slide class="class" id="id" style="background:;">
-  <hgroup>
-    <h2>Slide 4</h2>
-  </hgroup>
-  <article data-timings="">
-    
-  </article>
-  <!-- Presenter Notes -->
-</slide>
+<ul>
+<li><p>Which different kinds of distributions exist.</p></li>
+<li><p>Let your students know what is the difference between the theoretical normal distribution and a normal distribution with different number of observations.</p></li>
+</ul>
 
-<slide class="class" id="id" style="background:;">
-  <hgroup>
-    <h2>Slide 5</h2>
-  </hgroup>
-  <article data-timings="">
-    
+<p>Do not use it if:</p>
+
+<ul>
+<li><p>You don&#39;t like awesome apps like this one.</p></li>
+<li><p>You want to be hipster and avoid mainstream trends.</p></li>
+</ul>
+
   </article>
   <!-- Presenter Notes -->
 </slide>
@@ -102,31 +140,31 @@
     <ul>
       <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=1 title='Slide 1'>
+        data-slide=1 title='Introduction'>
          1
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=2 title='Slide 2'>
+        data-slide=2 title='Instructions'>
          2
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=3 title='Slide 3'>
+        data-slide=3 title='Technical information'>
          3
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=4 title='Slide 4'>
+        data-slide=4 title='Demo'>
          4
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=5 title='Slide 5'>
+        data-slide=5 title='Should I use it?'>
          5
       </a>
     </li>
